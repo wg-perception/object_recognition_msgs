@@ -15,27 +15,13 @@ string db
 #confidence: how sure you are it is that object and not another one
 float32 confidence
 
-############################################## VISUALIZATION INFO ######################################################
-################### THIS INFO SHOULD BE OBTAINED INDEPENDENTLY FROM THE CORE, LIKE IN AN RVIZ PLUGIN ###################
-
-# The human readable name of the object
-string name
-
-# The full mesh of the object: this can be useful for display purposes, augmented reality ... but it can be big
-# Make sure the type is MESH_RESOURCE
-object_recognition_msgs/Shape ground_truth_mesh
-geometry_msgs/PoseStamped ground_truth_mesh_pose
-
-# Sometimes, you only have a cloud in the DB
-# Make sure the type is POINTS
-sensor_msgs/PointCloud2[] ground_truth_point_cloud
-
 ################################################ OBJECT CLUSTERS #######################################################
 
-# Sometimes you can extract the 3d points that belong to the object
+# Sometimes you can extract the 3d points that belong to the object, in the frames of the original sensors
 sensor_msgs/PointCloud2[] point_cloud
 
 # Sometimes, you can only provide a bounding box/shape, even in 3d. We probably need a non visualization type there
+# This is in the pose frame
 visualization_msgs/Marker bounding_mesh
 
 # Sometimes, you only have 2d input so you can't really give a pose, you just get a contour, or a box
