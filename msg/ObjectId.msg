@@ -1,8 +1,9 @@
 ################################################## OBJECT ID #########################################################
 
-# Contains information about the identity of a found object
+# Contains information about the identity of a found object. Those two sets of parameters together uniquely define an
+# object
 
-# The id of the found object
+# The id of the found object: the unique identifier in the given db
 string id
 
 # The db parameters stored as a JSON/compressed YAML string. An object id does not make sense without the corresponding

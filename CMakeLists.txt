@@ -17,6 +17,7 @@ if (genmsg_FOUND)
     if (ROS_ELECTRIC_FOUND)
         find_package(ecto REQUIRED)
         find_ros_package(actionlib_msgs)
+        find_ros_package(arm_navigation_msgs)
         find_ros_package(geometry_msgs)
         find_ros_package(sensor_msgs)
         find_ros_package(std_msgs)
@@ -26,6 +27,9 @@ if (genmsg_FOUND)
         )
     else()
         find_package(ROS REQUIRED actionlib_msgs geometry_msgs rosbag roscpp sensor_msgs visualization_msgs)
+        include_directories(SYSTEM
+                        /opt/ros/fuerte/stacks/arm_navigation/arm_navigation_msgs/msg_gen/cpp/include/
+        )
     endif()
 
     add_action_files(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/action FILES ObjectRecognition.action)
@@ -34,7 +38,6 @@ if (genmsg_FOUND)
                             ObjectInformation.msg
                             RecognizedObject.msg
                             RecognizedObjectArray.msg
-                            Shape.msg
     )
     add_service_files(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/srv FILES GetObjectInformation.srv)
 
