@@ -1,0 +1,9 @@
+# Retrieve extra data from the DB for a given object
+
+# THe id of the object to retrieve info from
+object_recognition_msgs/ObjectId id
+
+---
+
+# Extra object info 
+object_recognition_msgs/ObjectInformation information

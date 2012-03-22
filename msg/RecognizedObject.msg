@@ -5,14 +5,10 @@
 # request them
 
 # The id of the found object
-string id
+object_recognition_msgs/ObjectId id
 
-# The db parameters stored as a JSON/compressed YAML string. An object id does not make sense without the corresponding
-# database. E.g., in object_recognition, it can look like: "{'type':'CouchDB', 'root':'http://localhost'}"
-# There is no conventional format for those parameters and it's nice to keep that flexibility.
-string db
-
-#confidence: how sure you are it is that object and not another one
+#confidence: how sure you are it is that object and not another one.
+# It is between 0 and 1 and the clsoer to one it is the better
 float32 confidence
 
 ################################################ OBJECT CLUSTERS #######################################################
