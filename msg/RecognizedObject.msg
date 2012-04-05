@@ -13,13 +13,14 @@ Header header
 object_recognition_msgs/ObjectId id
 
 #confidence: how sure you are it is that object and not another one.
-# It is between 0 and 1 and the clsoer to one it is the better
+# It is between 0 and 1 and the closer to one it is the better
 float32 confidence
 
 ################################################ OBJECT CLUSTERS #######################################################
 
 # Sometimes you can extract the 3d points that belong to the object, in the frames of the original sensors
-sensor_msgs/PointCloud2[] point_cloud
+# (it is an array as you might have several sensors)
+sensor_msgs/PointCloud2[] point_clouds
 
 # Sometimes, you can only provide a bounding box/shape, even in 3d. We probably need a non visualization type there
 # This is in the pose frame
@@ -27,7 +28,7 @@ visualization_msgs/Marker bounding_mesh
 
 # Sometimes, you only have 2d input so you can't really give a pose, you just get a contour, or a box
 # The last point will be linked to the first one automatically
-geometry_msgs/Point[] bounding_contour
+geometry_msgs/Point[] bounding_contours
 
 #################################################### POSE INFO #########################################################
 
