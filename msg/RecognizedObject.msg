@@ -1,3 +1,8 @@
+##################################################### HEADER ###########################################################
+
+# The header frame corresponds to the pose frame, NOT the point_cloud frame.
+Header header
+
 ################################################## OBJECT INFO #########################################################
 
 # Contains information about the identity and the position of a found object
