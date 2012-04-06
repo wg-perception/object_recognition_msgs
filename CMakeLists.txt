@@ -42,7 +42,8 @@ if (genmsg_FOUND)
                       FILES ObjectId.msg
                             ObjectInformation.msg
                             RecognizedObject.msg
-                            RecognizedObjectArray.msg
+                            Table.msg
+                            TableArray.msg
     )
 
     generate_messages(DEPENDENCIES actionlib_msgs arm_navigation_msgs geometry_msgs sensor_msgs std_msgs visualization_msgs)
