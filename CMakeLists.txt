@@ -47,3 +47,8 @@ if (genmsg_FOUND)
 
     generate_messages(DEPENDENCIES actionlib_msgs arm_navigation_msgs geometry_msgs sensor_msgs std_msgs visualization_msgs)
 endif()
+
+
+# generate ecto cells to wrap the different messages
+find_package(ecto_ros REQUIRED)
+pubsub_gen_wrap(object_recognition_msgs)
