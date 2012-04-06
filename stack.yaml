@@ -5,7 +5,7 @@ Author: Vincent Rabaud <vrabaud@willowgarage.com>
 Maintainer:  Vincent Rabaud <vrabaud@willowgarage.com>
 Homepage:  http://www.ros.org/wiki/object_recognition
 
-Depends: catkin, ecto, ecto_ros, genmsg
+Depends: catkin, ecto, ecto_ros, genmsg, tabletop
 
 Catkin-CopyrightType:  willowgarage
 Catkin-DebRulesType: cmake
