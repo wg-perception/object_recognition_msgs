@@ -1,3 +1,5 @@
+set_ecto_install_package_name(object_recognition_msgs/ecto_cells)
+
 find_package(ecto_ros REQUIRED)
 include_directories(SYSTEM
                     ${ecto_ros_INCLUDE_DIRS}
