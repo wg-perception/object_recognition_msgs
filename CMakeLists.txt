@@ -8,6 +8,9 @@ catkin_project(object_recognition_msgs)
 # generate the messages and the actionlib server for ROS
 find_package(genmsg REQUIRED)
 
+find_package(ecto REQUIRED)
+set_ecto_install_package_name(object_recognition_msgs/ecto_cells)
+
 if (genmsg_FOUND)
     if ("$ENV{ROS_ROOT}" STREQUAL "/opt/ros/electric/ros")
         set(ROS_ELECTRIC_FOUND TRUE)
