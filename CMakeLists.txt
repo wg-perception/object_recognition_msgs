@@ -54,3 +54,4 @@ find_package(ecto_ros REQUIRED)
 pubsub_gen_wrap(object_recognition_msgs)
 
 add_subdirectory(src)
+add_subdirectory(python)
