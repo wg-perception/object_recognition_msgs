@@ -45,6 +45,7 @@ if (genmsg_FOUND)
                       FILES ObjectId.msg
                             ObjectInformation.msg
                             RecognizedObject.msg
+                            RecognizedObjectArray.msg
                             Table.msg
                             TableArray.msg
     )
