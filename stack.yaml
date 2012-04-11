@@ -1,5 +1,5 @@
 Catkin-ProjectName: object_recognition_msgs
-Version: 0.1.0
+Version: 0.2.0
 Description: Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core
 Author: Vincent Rabaud <vrabaud@willowgarage.com>
 Maintainer:  Vincent Rabaud <vrabaud@willowgarage.com>
