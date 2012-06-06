@@ -1,6 +1,6 @@
 <stack>
   <name>object_recognition_msgs</name>
-  <version>0.3.1</version>
+  <version>0.3.2</version>
   <description>Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core</description>
   <author email="vrabaud@willowgarage.com">Vincent Rabaud</author>
   <maintainer email="vrabaud@willowgarage.com">Vincent Rabaud</maintainer>
@@ -12,6 +12,7 @@
   <build_depends>ecto</build_depends>
   <build_depends>ecto_ros</build_depends>
   <build_depends>genmsg</build_depends>
+  <build_depends>langs</build_depends>
   <depends>ecto</depends>
   <depends>ecto_ros</depends>
 </stack>
