@@ -33,7 +33,7 @@ if (genmsg_FOUND)
         add_service_files(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/srv FILES GetObjectInformation.srv)
     endif()
 
-    add_message_files(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/msg
+    add_message_files(DIRECTORY msg
                       FILES ObjectId.msg
                             ObjectInformation.msg
                             RecognizedObject.msg
