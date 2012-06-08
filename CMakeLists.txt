@@ -29,8 +29,8 @@ if (genmsg_FOUND)
     else()
         find_package(ROS REQUIRED actionlib_msgs geometry_msgs rosbag roscpp sensor_msgs visualization_msgs)
 
-        add_action_files(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/action FILES ObjectRecognition.action)
-        add_service_files(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/srv FILES GetObjectInformation.srv)
+        add_action_files(DIRECTORY action FILES ObjectRecognition.action)
+        add_service_files(DIRECTORY srv FILES GetObjectInformation.srv)
     endif()
 
     add_message_files(DIRECTORY msg
