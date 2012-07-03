@@ -27,7 +27,7 @@ if (genmsg_FOUND)
         find_ros_package(std_msgs)
         find_ros_package(visualization_msgs)
     else()
-        find_package(ROS REQUIRED actionlib_msgs geometry_msgs rosbag roscpp sensor_msgs visualization_msgs)
+        find_package(ROS REQUIRED actionlib_msgs geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
 
         add_action_files(DIRECTORY action FILES ObjectRecognition.action)
         add_service_files(DIRECTORY srv FILES GetObjectInformation.srv)
@@ -38,12 +38,11 @@ if (genmsg_FOUND)
                             ObjectInformation.msg
                             RecognizedObject.msg
                             RecognizedObjectArray.msg
-                            Shape.msg
                             Table.msg
                             TableArray.msg
     )
 
-    generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs std_msgs visualization_msgs)
+    generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs visualization_msgs)
 endif()
 
 # generate ecto cells to wrap the different messages

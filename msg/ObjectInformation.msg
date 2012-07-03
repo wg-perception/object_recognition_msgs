@@ -6,7 +6,7 @@ string name
 
 # The full mesh of the object: this can be useful for display purposes, augmented reality ... but it can be big
 # Make sure the type is MESH
-object_recognition_msgs/Shape ground_truth_mesh
+shape_msgs/Mesh ground_truth_mesh
 
 # Sometimes, you only have a cloud in the DB
 # Make sure the type is POINTS

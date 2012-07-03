@@ -18,4 +18,4 @@ float32 y_max
 # values; this is just as far as we've observed it.
 
 # Newer table definition as triangle mesh of convex hull (relative to pose)
-object_recognition_msgs/Shape convex_hull
+shape_msgs/Mesh convex_hull
