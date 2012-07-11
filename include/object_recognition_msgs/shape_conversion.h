@@ -37,19 +37,25 @@
 #define SHAPE_CONVERSION_H_
 
 #include <arm_navigation_msgs/Shape.h>
-#include <object_recognition_msgs/Shape.h>
+#include <shape_msgs/Mesh.h>
+#include <shape_msgs/MeshTriangle.h>
 
 arm_navigation_msgs::Shape
-or_to_an_shape(const object_recognition_msgs::Shape & or_shape)
+mesh_to_an_shape(const shape_msgs::Mesh & mesh)
 {
   arm_navigation_msgs::Shape an_shape;
-  an_shape.type = or_shape.type;
-  an_shape.dimensions = or_shape.dimensions;
-  an_shape.triangles = or_shape.triangles;
-  an_shape.vertices = or_shape.vertices;
-  an_shape.__connection_header = or_shape.__connection_header;
+  an_shape.type = arm_navigation_msgs::Shape::MESH;
+  an_shape.vertices = mesh.vertices;
+  for(int tri_i=0; tri_i < mesh.triangles.size(); tri_i++)
+    {
+      an_shape.triangles.push_back(mesh.triangles[tri_i].vertex_indices[0]);
+      an_shape.triangles.push_back(mesh.triangles[tri_i].vertex_indices[1]);
+      an_shape.triangles.push_back(mesh.triangles[tri_i].vertex_indices[2]);
+    }
+  an_shape.__connection_header = mesh.__connection_header;
 
   return an_shape;
 }
+
 
 #endif /* SHAPE_CONVERSION_H_ */
