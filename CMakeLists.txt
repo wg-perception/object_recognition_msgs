@@ -21,7 +21,7 @@ if (genmsg_FOUND)
     if (ROS_ELECTRIC_FOUND)
         find_package(ecto)
         find_ros_package(actionlib_msgs)
-        find_package(actionlib)
+        find_ros_package(actionlib)
         find_ros_package(geometry_msgs)
         find_ros_package(sensor_msgs)
         find_ros_package(std_msgs)
@@ -57,3 +57,7 @@ install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/
         DESTINATION include
         COMPONENT main
 )
+install(FILES ${PROJECT_SOURCE_DIR}/manifest.xml
+        DESTINATION share/${PROJECT_NAME}
+)
+
