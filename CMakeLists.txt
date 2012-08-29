@@ -38,7 +38,6 @@ if (genmsg_FOUND)
                             ObjectInformation.msg
                             RecognizedObject.msg
                             RecognizedObjectArray.msg
-                            Shape.msg
                             Table.msg
                             TableArray.msg
     )
