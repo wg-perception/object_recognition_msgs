@@ -10,7 +10,6 @@ catkin_project(object_recognition_msgs
 find_package(genmsg REQUIRED)
 
 find_package(ecto REQUIRED)
-set_ecto_install_package_name(object_recognition_msgs/ecto_cells)
 
 if (genmsg_FOUND)
     if ("$ENV{ROS_ROOT}" STREQUAL "/opt/ros/electric/ros")
@@ -47,7 +46,9 @@ endif()
 
 # generate ecto cells to wrap the different messages
 find_package(ecto_ros REQUIRED)
-pubsub_gen_wrap(object_recognition_msgs ObjectId ObjectInformation RecognizedObject RecognizedObjectArray Table TableArray)
+pubsub_gen_wrap(object_recognition_msgs DESTINATION object_recognition_msgs/ecto_cells INSTALL
+                ObjectId ObjectInformation RecognizedObject RecognizedObjectArray Table TableArray
+)
 
 add_subdirectory(python)
 
