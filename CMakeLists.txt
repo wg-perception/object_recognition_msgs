@@ -46,8 +46,9 @@ endif()
 
 # generate ecto cells to wrap the different messages
 find_package(ecto_ros REQUIRED)
-pubsub_gen_wrap(object_recognition_msgs DESTINATION object_recognition_msgs/ecto_cells INSTALL
-                ObjectId ObjectInformation RecognizedObject RecognizedObjectArray Table TableArray
+pubsub_gen_wrap(object_recognition_msgs DESTINATION object_recognition_msgs/ecto_cells
+                                        INSTALL
+                                        MESSAGES ObjectId ObjectInformation RecognizedObject RecognizedObjectArray Table TableArray
 )
 
 add_subdirectory(python)
