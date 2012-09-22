@@ -2,9 +2,14 @@ cmake_minimum_required(VERSION 2.8)
 project(object_recognition_msgs)
 
 find_package(catkin REQUIRED)
+if (${catkin_VERSION} VERSION_GREATER "0.5.26")
+catkin_package()
+catkin_package_export(INCLUDE_DIRS include)
+else()
 catkin_stack()
 catkin_project(object_recognition_msgs
                INCLUDE_DIRS include)
+endif()
 
 # generate the messages and the actionlib server for ROS
 find_package(genmsg REQUIRED)
