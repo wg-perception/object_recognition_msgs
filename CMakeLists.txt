@@ -1,24 +1,11 @@
 cmake_minimum_required(VERSION 2.8)
 project(object_recognition_msgs)
 
-find_package(catkin REQUIRED)
-if (${catkin_VERSION} VERSION_GREATER "0.5.28")
-catkin_package(INCLUDE_DIRS include)
-else()
-catkin_stack()
-catkin_project(object_recognition_msgs
-               INCLUDE_DIRS include)
-endif()
-
 # generate the messages and the actionlib server for ROS
-find_package(genmsg REQUIRED)
-
-find_package(ecto REQUIRED)
-
         if (ROS_FUERTE_FOUND)
-        find_package(ROS REQUIRED actionlib_msgs geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
+        find_package(ROS REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
         else()
-find_package(catkin REQUIRED actionlib_msgs geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
+find_package(catkin REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
         endif()
 
 add_action_files(DIRECTORY action FILES ObjectRecognition.action)
@@ -34,6 +21,16 @@ add_message_files(DIRECTORY msg
 )
 
 generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs visualization_msgs)
+
+# define the project
+find_package(catkin REQUIRED)
+if (${catkin_VERSION} VERSION_GREATER "0.5.28")
+catkin_package(INCLUDE_DIRS include)
+else()
+catkin_stack()
+catkin_project(object_recognition_msgs
+               INCLUDE_DIRS include)
+endif()
 
 # generate ecto cells to wrap the different messages
 find_package(ecto_ros REQUIRED)
