@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(object_recognition_msgs)
 
 # generate the messages and the actionlib server for ROS
+find_package(ecto)
         if (ROS_FUERTE_FOUND)
         find_package(ROS REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
         else()
