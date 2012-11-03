@@ -5,7 +5,6 @@
   <author email="vrabaud@willowgarage.com">Vincent Rabaud</author>
   <maintainer email="vrabaud@willowgarage.com">Vincent Rabaud</maintainer>
   <license>BSD</license>
-  <copyright>Willow Garage</copyright>
 
   <url>http://www.ros.org/wiki/object_recognition</url>
   <build_depend>catkin</build_depend>
