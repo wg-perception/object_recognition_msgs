@@ -30,12 +30,12 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/__init__.py.plain.in
                @ONLY
 )
 
-install(FILES ${ecto_module_PYTHON_OUTPUT}/ecto_cells/__init__.py
+install(FILES ${ECTO_PYTHON_BUILD_PATH}/${PROJECT_NAME}/ecto_cells/__init__.py
         DESTINATION ${PYTHON_PACKAGES_PATH}/object_recognition_msgs/ecto_cells/
 )
 
-install(FILES ${ecto_module_PYTHON_OUTPUT}/__init__.py
-        DESTINATION ${PYTHON_PACKAGES_PATH}/object_recognition_msgs
+install(FILES ${ECTO_PYTHON_BUILD_PATH}/${PROJECT_NAME}/__init__.py
+        DESTINATION ${PYTHON_PACKAGES_PATH}/object_recognition_msgs/
 )
 
 endif()
