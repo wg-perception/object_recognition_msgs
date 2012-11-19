@@ -4,6 +4,7 @@ project(object_recognition_msgs)
 # generate the messages and the actionlib server for ROS
 find_package(ecto)
         if (ROS_FUERTE_FOUND)
+find_package(catkin)
         find_package(ROS REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
         else()
 find_package(catkin REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
