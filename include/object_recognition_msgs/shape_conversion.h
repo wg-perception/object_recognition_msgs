@@ -40,6 +40,8 @@
 #include <shape_msgs/Mesh.h>
 #include <shape_msgs/MeshTriangle.h>
 
+/** Converts a shape_msgs::Mesh to an  arm_navigation_msgs::Shape that is a mesh
+ */
 arm_navigation_msgs::Shape
 mesh_to_an_shape(const shape_msgs::Mesh & mesh)
 {
@@ -57,5 +59,26 @@ mesh_to_an_shape(const shape_msgs::Mesh & mesh)
   return an_shape;
 }
 
+/** Converts an arm_navigation_msgs::Shape that is a mesh to a shape_msgs::Mesh
+ */
+shape_msgs::Mesh
+an_shape_to_mesh(const arm_navigation_msgs::Shape & an_shape)
+{
+  shape_msgs::Mesh mesh;
+  assert(an_shape.type == arm_navigation_msgs::Shape::MESH);
+  mesh.vertices = an_shape.vertices;
+  mesh.triangles.reserve(an_shape.triangles.size());
+  shape_msgs::MeshTriangle triangle;
+  for(int tri_i=0; tri_i < an_shape.triangles.size(); tri_i=tri_i+3)
+    {
+      triangle.vertex_indices[0] = an_shape.triangles[tri_i];
+      triangle.vertex_indices[1] = an_shape.triangles[tri_i+1];
+      triangle.vertex_indices[2] = an_shape.triangles[tri_i+2];
+      mesh.triangles.push_back(triangle);
+    }
+  mesh.__connection_header = an_shape.__connection_header;
+
+  return mesh;
+}
 
 #endif /* SHAPE_CONVERSION_H_ */
