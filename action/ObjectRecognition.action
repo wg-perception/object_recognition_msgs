@@ -1,4 +1,6 @@
-# Empty goal its just a thunk
+# Optional ROI to use for the object detection
+bool use_roi
+float32[] filter_limits
 ---
 # Send the found objects, see the msg files for docs
 object_recognition_msgs/RecognizedObjectArray recognized_objects
