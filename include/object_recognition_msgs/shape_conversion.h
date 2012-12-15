@@ -42,7 +42,7 @@
 
 /** Converts a shape_msgs::Mesh to an  arm_navigation_msgs::Shape that is a mesh
  */
-arm_navigation_msgs::Shape
+inline arm_navigation_msgs::Shape
 mesh_to_an_shape(const shape_msgs::Mesh & mesh)
 {
   arm_navigation_msgs::Shape an_shape;
@@ -61,7 +61,7 @@ mesh_to_an_shape(const shape_msgs::Mesh & mesh)
 
 /** Converts an arm_navigation_msgs::Shape that is a mesh to a shape_msgs::Mesh
  */
-shape_msgs::Mesh
+inline shape_msgs::Mesh
 an_shape_to_mesh(const arm_navigation_msgs::Shape & an_shape)
 {
   shape_msgs::Mesh mesh;
