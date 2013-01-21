@@ -10,32 +10,30 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/__init__.py.plain.in
 )
 
 install(FILES ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_DESTINATION}/ecto_cells/__init__.py
-        DESTINATION ${CATKIN_GLOBAL_PYTHON_DESTINATION}/${PROJECT_NAME}/ecto_cells/
+        DESTINATION ${CATKIN_PACKAGE_PYTHON_DESTINATION}/ecto_cells/
 )
 
 install(FILES ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_DESTINATION}/__init__.py
-        DESTINATION ${CATKIN_GLOBAL_PYTHON_DESTINATION}/${PROJECT_NAME}/
+        DESTINATION ${CATKIN_PACKAGE_PYTHON_DESTINATION}/
 )
 
 else()
-set(ECTO_PYTHON_BUILD_PATH ${CMAKE_BINARY_DIR}/gen/py/)
-
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/__init__.py.plain.in
-               ${ECTO_PYTHON_BUILD_PATH}/${PROJECT_NAME}/ecto_cells/__init__.py
+               ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_BUILD_DESTINATION}/ecto_cells/__init__.py
                @ONLY
 )
  
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/__init__.py.plain.in
-               ${ECTO_PYTHON_BUILD_PATH}/${PROJECT_NAME}/__init__.py
+               ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_BUILD_DESTINATION}/__init__.py
                @ONLY
 )
 
-install(FILES ${ECTO_PYTHON_BUILD_PATH}/${PROJECT_NAME}/ecto_cells/__init__.py
-        DESTINATION ${PYTHON_PACKAGES_PATH}/object_recognition_msgs/ecto_cells/
+install(FILES ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_BUILD_DESTINATION}/ecto_cells/__init__.py
+        DESTINATION ${CATKIN_PACKAGE_PYTHON_DESTINATION}/ecto_cells/
 )
 
-install(FILES ${ECTO_PYTHON_BUILD_PATH}/${PROJECT_NAME}/__init__.py
-        DESTINATION ${PYTHON_PACKAGES_PATH}/object_recognition_msgs/
+install(FILES ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_BUILD_DESTINATION}/__init__.py
+        DESTINATION ${CATKIN_PACKAGE_PYTHON_DESTINATION}/
 )
 
 endif()
