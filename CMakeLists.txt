@@ -2,12 +2,11 @@ cmake_minimum_required(VERSION 2.8)
 project(object_recognition_msgs)
 
 # generate the messages and the actionlib server for ROS
-find_package(ecto)
-        if (ROS_FUERTE_FOUND)
-find_package(catkin)
-        find_package(ROS REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
-        else()
-find_package(catkin REQUIRED actionlib_msgs ecto genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
+find_package(catkin REQUIRED)
+if (${catkin_VERSION} VERSION_GREATER "0.5.28")
+find_package(catkin REQUIRED actionlib_msgs genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
+else()
+        find_package(ROS REQUIRED actionlib_msgs genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
         endif()
 
 add_action_files(DIRECTORY action FILES ObjectRecognition.action)
@@ -43,13 +42,6 @@ set(CATKIN_PACKAGE_PYTHON_DESTINATION ${INSTALLED_PYTHONPATH}/${PROJECT_NAME}/)
 set(CATKIN_PACKAGE_SHARE_DESTINATION share/${PROJECT_NAME}/)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 endif()
-
-# generate ecto cells to wrap the different messages
-find_package(ecto_ros REQUIRED)
-pubsub_gen_wrap(object_recognition_msgs DESTINATION object_recognition_msgs/ecto_cells
-                                        INSTALL
-                                        MESSAGES ObjectId ObjectInformation RecognizedObject RecognizedObjectArray Table TableArray
-)
 
 add_subdirectory(python)
 
