@@ -4,9 +4,9 @@ project(object_recognition_msgs)
 # generate the messages and the actionlib server for ROS
 find_package(catkin REQUIRED)
 if (${catkin_VERSION} VERSION_GREATER "0.5.28")
-find_package(catkin REQUIRED actionlib_msgs genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
+find_package(catkin REQUIRED actionlib_msgs genmsg geometry_msgs sensor_msgs shape_msgs visualization_msgs)
 else()
-        find_package(ROS REQUIRED actionlib_msgs genmsg geometry_msgs rosbag roscpp sensor_msgs shape_msgs visualization_msgs)
+        find_package(ROS REQUIRED actionlib_msgs genmsg geometry_msgs sensor_msgs shape_msgs visualization_msgs)
         endif()
 
 add_action_files(DIRECTORY action FILES ObjectRecognition.action)
@@ -24,7 +24,6 @@ add_message_files(DIRECTORY msg
 generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs visualization_msgs)
 
 # define the project
-find_package(catkin REQUIRED)
 if (${catkin_VERSION} VERSION_GREATER "0.5.28")
 catkin_package(INCLUDE_DIRS include)
 else()
