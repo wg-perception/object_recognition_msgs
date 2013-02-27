@@ -12,7 +12,9 @@
   <build_depends>common_msgs</build_depends>
   <build_depends>genmsg</build_depends>
   <build_depends>langs-dev</build_depends>
+  <build_depends>std_msgs</build_depends>
 
   <depends>common_msgs</depends>
   <depends>langs</depends>
+  <depends>std_msgs</depends>
 </stack>
