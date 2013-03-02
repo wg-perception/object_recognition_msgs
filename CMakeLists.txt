@@ -25,11 +25,10 @@ generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_ms
 
 # define the project
 if (${catkin_VERSION} VERSION_GREATER "0.5.28")
-catkin_package(INCLUDE_DIRS include)
+catkin_package()
 else()
 catkin_stack()
-catkin_project(object_recognition_msgs
-               INCLUDE_DIRS include)
+catkin_project(object_recognition_msgs)
 set(catkin_LIBRARIES ${ROS_LIBRARIES})
 set(catkin_INCLUDE_DIRS ${ROS_INCLUDE_DIRS})
 set(CATKIN_DEVEL_PREFIX ${CMAKE_BINARY_DIR})
@@ -44,13 +43,11 @@ endif()
 
 add_subdirectory(python)
 
-# install the include folder
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/
-        DESTINATION include
-        COMPONENT main
-)
 if (ROS_FUERTE_FOUND)
 install(FILES ${PROJECT_SOURCE_DIR}/manifest.xml
         DESTINATION share/${PROJECT_NAME}
 )
 endif()
+
+# add docs
+ecto_sphinx(${CMAKE_CURRENT_SOURCE_DIR}/doc/source doc)
