@@ -1,10 +1,10 @@
 ################################################## OBJECT ID #########################################################
 
-# Contains information about the identity of a found object. Those two sets of parameters together uniquely define an
+# Contains information about the type of a found object. Those two sets of parameters together uniquely define an
 # object
 
-# The id of the found object: the unique identifier in the given db
-string id
+# The type of the found object: the unique identifier in the given db
+string type
 
 # The db parameters stored as a JSON/compressed YAML string. An object id does not make sense without the corresponding
 # database. E.g., in object_recognition, it can look like: "{'type':'CouchDB', 'root':'http://localhost'}"

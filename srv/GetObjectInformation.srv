@@ -1,7 +1,7 @@
 # Retrieve extra data from the DB for a given object
 
-# The id of the object to retrieve info from
-object_recognition_msgs/ObjectId id
+# The type of the object to retrieve info from
+object_recognition_msgs/ObjectType type
 
 ---
 

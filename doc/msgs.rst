@@ -7,9 +7,9 @@ Messages
 Object Definition
 *****************
 
-An object is uniquely defined by an ID and a database in ``ObjectId.msg``:
+An object is uniquely defined by a type and a database in ``ObjectId.msg``:
 
-.. literalinclude:: ../msg/ObjectId.msg
+.. literalinclude:: ../msg/ObjectType.msg
 
 More information is also stored by ``ORK`` in the database. This information can be retrieved in
 ``ObjectInformation.msg``:

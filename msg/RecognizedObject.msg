@@ -5,12 +5,12 @@ Header header
 
 ################################################## OBJECT INFO #########################################################
 
-# Contains information about the identity and the position of a found object
+# Contains information about the type and the position of a found object
 # Some of those fields might not be filled because the used techniques do not fill them or because the user does not
 # request them
 
-# The id of the found object
-object_recognition_msgs/ObjectId id
+# The type of the found object
+object_recognition_msgs/ObjectType type
 
 #confidence: how sure you are it is that object and not another one.
 # It is between 0 and 1 and the closer to one it is the better

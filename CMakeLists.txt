@@ -13,7 +13,7 @@ add_action_files(DIRECTORY action FILES ObjectRecognition.action)
 add_service_files(DIRECTORY srv FILES GetObjectInformation.srv)
 
 add_message_files(DIRECTORY msg
-                  FILES ObjectId.msg
+                  FILES ObjectType.msg
                         ObjectInformation.msg
                         RecognizedObject.msg
                         RecognizedObjectArray.msg
