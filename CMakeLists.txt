@@ -50,4 +50,6 @@ install(FILES ${PROJECT_SOURCE_DIR}/manifest.xml
 endif()
 
 # add docs
+if (ecto_FOUND)
 ecto_sphinx(${CMAKE_CURRENT_SOURCE_DIR}/doc doc)
+endif()
