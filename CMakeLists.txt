@@ -25,10 +25,10 @@ generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_ms
 
 # define the project
 if (${catkin_VERSION} VERSION_GREATER "0.5.28")
-catkin_package()
+catkin_package(CATKIN_DEPENDS actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs visualization_msgs)
 else()
 catkin_stack()
-catkin_project(object_recognition_msgs)
+catkin_project(object_recognition_msgs DEPENDS actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs visualization_msgs)
 set(catkin_LIBRARIES ${ROS_LIBRARIES})
 set(catkin_INCLUDE_DIRS ${ROS_INCLUDE_DIRS})
 set(CATKIN_DEVEL_PREFIX ${CMAKE_BINARY_DIR})
