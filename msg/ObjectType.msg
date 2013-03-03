@@ -3,8 +3,8 @@
 # Contains information about the type of a found object. Those two sets of parameters together uniquely define an
 # object
 
-# The type of the found object: the unique identifier in the given db
-string type
+# The key of the found object: the unique identifier in the given db
+string key
 
 # The db parameters stored as a JSON/compressed YAML string. An object id does not make sense without the corresponding
 # database. E.g., in object_recognition, it can look like: "{'type':'CouchDB', 'root':'http://localhost'}"
