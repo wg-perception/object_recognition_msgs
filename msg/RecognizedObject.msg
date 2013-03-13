@@ -22,9 +22,9 @@ float32 confidence
 # (it is an array as you might have several sensors)
 sensor_msgs/PointCloud2[] point_clouds
 
-# Sometimes, you can only provide a bounding box/shape, even in 3d. We probably need a non visualization type there
+# Sometimes, you can only provide a bounding box/shape, even in 3d
 # This is in the pose frame
-visualization_msgs/Marker bounding_mesh
+shape_msgs/Mesh bounding_mesh
 
 # Sometimes, you only have 2d input so you can't really give a pose, you just get a contour, or a box
 # The last point will be linked to the first one automatically
