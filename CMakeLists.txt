@@ -20,8 +20,3 @@ generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_ms
 
 # define the project
 catkin_package(CATKIN_DEPENDS actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs)
-
-# add docs
-if (ecto_FOUND)
-ecto_sphinx(${CMAKE_CURRENT_SOURCE_DIR}/doc doc)
-endif()
