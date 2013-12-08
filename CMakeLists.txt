@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 2.8)
 project(object_recognition_msgs)
 
 # generate the messages and the actionlib server for ROS
-find_package(catkin REQUIRED)
 find_package(catkin REQUIRED actionlib_msgs genmsg geometry_msgs sensor_msgs shape_msgs std_msgs)
 
 add_action_files(DIRECTORY action FILES ObjectRecognition.action)
@@ -21,8 +20,6 @@ generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_ms
 
 # define the project
 catkin_package(CATKIN_DEPENDS actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs)
-
-add_subdirectory(python)
 
 # add docs
 if (ecto_FOUND)
