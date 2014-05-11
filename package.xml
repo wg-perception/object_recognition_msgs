@@ -23,4 +23,8 @@
   <run_depend>std_msgs</run_depend>
 
   <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
 </package>
