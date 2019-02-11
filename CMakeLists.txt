@@ -46,4 +46,4 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 )
 
 # define the project
-catkin_package(CATKIN_DEPENDS actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs)
+ament_package()
