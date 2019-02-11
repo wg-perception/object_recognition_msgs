@@ -11,7 +11,13 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # generate the messages and the actionlib server for ROS
-find_package(catkin REQUIRED actionlib_msgs genmsg geometry_msgs sensor_msgs shape_msgs std_msgs)
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(action_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(shape_msgs REQUIRED)
 
 add_action_files(DIRECTORY action FILES ObjectRecognition.action)
 add_service_files(DIRECTORY srv FILES GetObjectInformation.srv)
