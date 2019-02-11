@@ -19,19 +19,31 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(shape_msgs REQUIRED)
 
-add_action_files(DIRECTORY action FILES ObjectRecognition.action)
-add_service_files(DIRECTORY srv FILES GetObjectInformation.srv)
-
-add_message_files(DIRECTORY msg
-                  FILES ObjectType.msg
-                        ObjectInformation.msg
-                        RecognizedObject.msg
-                        RecognizedObjectArray.msg
-                        Table.msg
-                        TableArray.msg
+set(msg_files
+	"msg/ObjectInformation.msg"
+	"msg/ObjectType.msg"
+	"msg/RecognizedObject.msg"
+	"msg/RecognizedObjectArray.msg"
+	"msg/Table.msg"
+	"msg/TableArray.msg"
+)
+set(srv_files
+	"srv/GetObjectInformation.srv"
+)
+set(action_files
+	"action/ObjectRecognition.action"
 )
 
-generate_messages(DEPENDENCIES actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs)
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  ${srv_files}
+  DEPENDENCIES
+		action_msgs
+		std_msgs
+		geometry_msgs
+		sensor_msgs
+		shape_msgs
+)
 
 # define the project
 catkin_package(CATKIN_DEPENDS actionlib_msgs geometry_msgs sensor_msgs shape_msgs std_msgs)
