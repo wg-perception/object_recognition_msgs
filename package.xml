@@ -1,4 +1,4 @@
-<package>
+<package format="3">
   <name>object_recognition_msgs</name>
   <version>0.4.2</version>
   <description>Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core</description>
