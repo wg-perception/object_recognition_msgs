@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 3.5)
 project(object_recognition_msgs)
 
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
+endif()
+
 # generate the messages and the actionlib server for ROS
 find_package(catkin REQUIRED actionlib_msgs genmsg geometry_msgs sensor_msgs shape_msgs std_msgs)
 
