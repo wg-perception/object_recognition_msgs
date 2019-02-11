@@ -24,9 +24,9 @@
   <exec_depend>shape_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
-    <architecture_independent/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
