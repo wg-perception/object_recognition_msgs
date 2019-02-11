@@ -1,4 +1,4 @@
-Header header
+std_msgs/Header header
 
 # Just an array of tables
 object_recognition_msgs/Table[] tables
