@@ -1,7 +1,7 @@
 ##################################################### HEADER ###########################################################
 
 # The header frame corresponds to the pose frame, NOT the point_cloud frame.
-Header header
+std_msgs/Header header
 
 ################################################## OBJECT INFO #########################################################
 

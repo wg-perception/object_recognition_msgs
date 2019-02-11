@@ -1,6 +1,6 @@
 # Informs that a planar table has been detected at a given location
 
-Header header
+std_msgs/Header header
 
 # The pose gives you the transform that take you to the coordinate system
 # of the table, with the origin somewhere in the table plane and the 
