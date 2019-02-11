@@ -1,4 +1,4 @@
-<package>
+<package format="3">
   <name>object_recognition_msgs</name>
   <version>0.4.1</version>
   <description>Object_recognition_msgs contains the ROS message and the actionlib definition used in object_recognition_core</description>
@@ -8,23 +8,25 @@
 
   <url>http://www.ros.org/wiki/object_recognition</url>
 
-  <build_depend>actionlib_msgs</build_depend>
-  <build_depend>geometry_msgs</build_depend>
   <build_depend>message_generation</build_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <build_depend>action_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>shape_msgs</build_depend>
-  <build_depend>std_msgs</build_depend>
 
-  <run_depend>actionlib_msgs</run_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>message_runtime</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>shape_msgs</run_depend>
-  <run_depend>std_msgs</run_depend>
+  <exec_depend>message_generation</exec_depend> <!-- provide message generation to downstream packages -->
+  <exec_depend>message_runtime</exec_depend>
+	<exec_depend>action_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>shape_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
-    <architecture_independent/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
