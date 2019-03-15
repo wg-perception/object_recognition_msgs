@@ -37,8 +37,7 @@ set(action_files
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
-  # TODO(mlautman) uncomment once IDL refactor fixes action issue
-  # ${action_files}
+  ${action_files}
   DEPENDENCIES
 		action_msgs
 		std_msgs
