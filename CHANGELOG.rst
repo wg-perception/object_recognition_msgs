@@ -2,6 +2,11 @@
 Changelog for package object_recognition_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Bump CMake version to avoid CMP0048
+* Contributors: Jonathan Binney, Shane Loretz
+
 0.4.1 (2014-05-11)
 ------------------
 * have the package be architecture independent
