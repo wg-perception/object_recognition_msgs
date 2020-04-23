@@ -2,8 +2,8 @@
 Changelog for package object_recognition_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.2 (2020-04-23)
+------------------
 * Bump CMake version to avoid CMP0048
 * Contributors: Jonathan Binney, Shane Loretz
 
