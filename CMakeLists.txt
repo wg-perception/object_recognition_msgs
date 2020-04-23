@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.0.2)
 project(object_recognition_msgs)
 
 # generate the messages and the actionlib server for ROS
