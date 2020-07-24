@@ -2,6 +2,23 @@
 Changelog for package object_recognition_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#11 <https://github.com/wg-perception/object_recognition_msgs/issues/11>`_ from PickNikRobotics/master
+  Port to ROS2
+* Suppress -Wredundant-decls warnings (`#1 <https://github.com/wg-perception/object_recognition_msgs/issues/1>`_)
+* fixing msg port
+* Update package.xml build tool & enable message generation
+* Update package.xml format
+* Update package.xml dependencies
+* Update CMakeLists package command
+* Update CMakeLists file list & interface generator command
+* Update CMakeLists find_package list
+* Default to C++ 14 & cmake C++ flags
+* Update CMakeLists cmake version
+* Specify Header origin
+* Contributors: Jonathan Binney, Michael Lautman, Yu, Yan, ibaiape
+
 0.4.2 (2020-04-23)
 ------------------
 * Bump CMake version to avoid CMP0048
