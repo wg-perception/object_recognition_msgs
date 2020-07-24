@@ -2,7 +2,7 @@
 Changelog for package object_recognition_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
+2.0.0 (2020-07-23)
 -----------
 * Merge pull request `#11 <https://github.com/wg-perception/object_recognition_msgs/issues/11>`_ from PickNikRobotics/master
   Port to ROS2
